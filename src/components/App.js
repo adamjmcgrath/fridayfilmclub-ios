@@ -12,6 +12,10 @@ const {
 export default class App extends React.Component {
 
   render() {
+
+    let SimpleAuthWrapper = require('NativeModules').SimpleAuthWrapper;
+    SimpleAuthWrapper.login('twitter', function() {});
+
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
